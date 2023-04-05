@@ -1,0 +1,10 @@
+INFO - 2023-03-28 10:55:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-28 10:55:17 --> Attempt to read property "id" on null
+in APPPATH\Models\tftModel.php on line 37.
+ 1 APPPATH\Models\tftModel.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'APPPATH\\Models\\tftModel.php', 37)
+ 2 APPPATH\Controllers\tftController.php(17): App\Models\tftModel->getLastSadTime()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\tftController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
