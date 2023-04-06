@@ -66,66 +66,8 @@
 <img src="<?= base_url('uploads/myimage.jpg') ?>" alt="My Image">
 <img src="<?= base_url('uploads/myimage.jpg') ?>" alt="My Image">
 
+
+
 </body>
 </html>
 
-<?php if (! empty($tft) && is_array($tft)): ?>
-    <div class="grid-container">
-    <?php foreach ($tft as $tft_item): ?>
-        <div class="mood-item grid-item">
-            <h4 class="mood-date"><?= esc($tft_item['datum']) ?></h4>
-            <div class="mood-content"><?= esc($tft_item['mood']) ?></div> <br>
-            <div class="mood-opmerking"><?=esc($tft_item['opmerking']) ?></div>
-        </div>
-        </div>
-    <?php endforeach ?>
-    <script type="text/javascript" src="<?php echo base_url('js/script.js'); ?>"></script>
-<?php else: ?>
-<?php endif ?>
-
-<?php
-
-// Berekent de totalen voor elke mood
-// Init de variablen
-// $totalSad = 0;
-// $totalHappy = 0;
-// $totalExcited = 0;
-// $totalAngry = 0;
-// $totalRelaxed = 0;
- // loopt door de grafieken array
-// foreach ($grafieken as $row) {
-//     switch ($row['mood']) {
-//         case 'sad':
-//             $totalSad = $row['total'];
-//             break;
-//         case 'happy':
-//             $totalHappy = $row['total'];
-//             break;
-//         case 'excited':
-//             $totalExcited = $row['total'];
-//             break;
-//         case 'angry':
-//             $totalAngry = $row['total'];
-//             break;
-//         case 'relaxed':
-//             $totalRelaxed = $row['total'];
-//             break;
-//     }
-// }
-
-// $total = $totalSad + $totalHappy + $totalExcited + $totalAngry + $totalRelaxed;
-// hoekwaardes
-// $sadAngle = ($totalSad / $total) * 2 * pi();
-// $happyAngle = ($totalHappy / $total) * 2 * pi();
-// $excitedAngle = ($totalExcited / $total) * 2 * pi();
-// $angryAngle = ($totalAngry / $total) * 2 * pi();
-// $RelaxedAngle = ($totalRelaxed / $total) * 2 * pi();
-
-// var_dump($totalSad);
-// Berekent de hoeken van elke Pizza ARC
-
-// $data['totalAngle'] = $sadAngle + $happyAngle + $excitedAngle;
-// echo view('public/js/script.js', $data);
-
-?>
-    <!-- <script type="text/javascript" src="<?php echo base_url('js/script.js'); ?>"></script> -->
