@@ -32,8 +32,9 @@ li a:hover {
   <ul>
   <li><a href="/">Home</a></li>
     <li><a href="/create">Create</a></li>
+    <li><a href="/create">Lessen</a></li>
     <li><a href="/admin">Admin</a></li>
-    <li><a href="/logout">Logout</a></li>
     <li><a href="/rooster">Rooster</a></li>
+    <li><a href="/logout">Logout</a></li>
   </ul>
 </nav>
