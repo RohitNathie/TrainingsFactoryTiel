@@ -5,9 +5,9 @@ use CodeIgniter\Model;
 
 class tftModel extends Model
 {
-    protected $table = 'login';
+    protected $table = 'users';
 
-    protected $allowedFields = ['user_id', 'user_name','password', 'user_email'];
+    protected $allowedFields = ['id', 'username','password', 'user_email', 'leeftijd', 'telnummer', 'role'];
     
     public function gettft($slug = false)
     {
@@ -18,11 +18,25 @@ class tftModel extends Model
      return $this->where(['mood' => $slug])->first();
     }
 
-    function getMyMood()
+    public function getMyMood()
     {
         $user = auth()->user();
 
         return $this->where(['user_name' => $user->id])->find();
+    }
+    public function admin() {
+
+    }
+    public function getUsers()
+    {
+        $db = db_connect();
+        $query   = $db->query('SELECT username FROM users');
+        $results = $query->getResultArray();
+    }
+
+    function getEmail()
+    {
+
     }
  // de data voor de tft
     // public function gettftByDate($date) {

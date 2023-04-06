@@ -51,7 +51,6 @@
 <?= validation_list_errors() ?>
 <form action="/create" method="post">
 <?= csrf_field() ?>
-    <h2 for="mood">How are you feeling today?</h2>
     <br>
     <select name="mood">
         <option value="<?= set_value('mood', 'happy') ?>">Happy</option>

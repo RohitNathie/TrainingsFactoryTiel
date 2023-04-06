@@ -28,11 +28,10 @@ li a:hover {
 } 
 
 </style>
-<script type="text/javascript" src="<?php echo base_url('js/script.js'); ?>"></script>
 <nav>
   <ul>
     <li><a href="/create">Create</a></li>
-    <li><a href="/">Index</a></li>
+    <li><a href="/admin">Admin</a></li>
     <li><a href="/logout">Logout</a></li>
   </ul>
 </nav>
