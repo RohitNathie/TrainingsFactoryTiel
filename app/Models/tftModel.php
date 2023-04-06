@@ -6,8 +6,9 @@ use CodeIgniter\Model;
 class tftModel extends Model
 {
     protected $table = 'users';
+ 
+    protected $allowedFields = ['id', 'username','password', 'user_email', 'leeftijd', 'telnummer', 'role', 'geboortedatum', 'secret'];
 
-    protected $allowedFields = ['id', 'username','password', 'user_email', 'leeftijd', 'telnummer', 'role', 'geboortedatum'];
     
     public function gettft($slug = false)
     {
@@ -32,10 +33,10 @@ class tftModel extends Model
     {
         $user = auth()->user();
         $db = db_connect();
-        $query = "SELECT * FROM `users`";
-
+        $query = "SELECT u.*, a.secret FROM `users` u JOIN `auth_identities` a ON u.id = a.user_id";
+    
         $select = $db->query($query);
-
+    
         return $select->getResult();
     }
 
