@@ -73,12 +73,7 @@ class tftController extends BaseController
             .view ('tft/create')
             .view('templates/footer');
         }
-
-
-
-        return view('templates/header', ['title' => 'Maakt een nieuwe tft aan'])
-            . view('tft/index')
-            . view('templates/footer');
+        
     }
     // // het saven van je opmerking naar db
     // public function save_note(){   

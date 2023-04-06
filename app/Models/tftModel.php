@@ -7,7 +7,7 @@ class tftModel extends Model
 {
     protected $table = 'users';
 
-    protected $allowedFields = ['id', 'username','password', 'user_email', 'leeftijd', 'telnummer', 'role'];
+    protected $allowedFields = ['id', 'username','password', 'user_email', 'leeftijd', 'telnummer', 'role', 'geboortedatum'];
     
     public function gettft($slug = false)
     {
@@ -26,18 +26,13 @@ class tftModel extends Model
     }
     public function getLes()
     {
-        $user = auth()->user();
-        $db = db_connect();
-        $query = "SELECT * FROM `sortenles`";
-        $select = $db->query($query);
-
-        return $select->getResult();
+ 
     }
     public function getUsers()
     {
         $user = auth()->user();
         $db = db_connect();
-        $query = "SELECT * FROM `users`;";
+        $query = "SELECT * FROM `users`";
 
         $select = $db->query($query);
 
@@ -46,8 +41,7 @@ class tftModel extends Model
 
     function getEmail()
     {
-        $user = auth()->user();
-        $db = db_connect();
+
     }
  // de data voor de tft
     // public function gettftByDate($date) {
