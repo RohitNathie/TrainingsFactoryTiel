@@ -58,19 +58,23 @@ class tftController extends BaseController
                 . view('templates/footer');
         }
         // gegevens opgehaald 
-        $post = $this->request->getPost(['user_name', 'mood', 'aantekening']);
-        $model = model(tftModel::class);
-        $naam = auth()->user()->id;
-        // toevoegen in de db + de returns
-        $model->save([
-            'title' => $post['title'],
-            'mood' => $post['mood'],
-            'opmerking' => $post['aantekening'],
-        ]);
+        $post = $this->request->getPost(['username', 'date', 'tijd']);
+        // $model->save([
+        //     'title' => $post['title'],
+        //     'mood' => $post['mood'],
+        //     'opmerking' => $post['aantekening'],
+        // ]);
 
-        return view('templates/header', ['title' => 'What\'s your mood today?'])
-                .view ('tft/succes')
-                .view('templates/footer');
+        if(! $this->validateData($post, [
+            'title' => 'required|max_length[255]|min_length[3]',
+            'body' => 'required|max_length[5000]|min_length[10]',
+        ])) {
+            return view('templates/header', ['title' => 'Maak een les hier aan'])
+            .view ('tft/create')
+            .view('templates/footer');
+        }
+
+
 
         return view('templates/header', ['title' => 'Maakt een nieuwe tft aan'])
             . view('tft/index')

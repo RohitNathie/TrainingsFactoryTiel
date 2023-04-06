@@ -24,19 +24,30 @@ class tftModel extends Model
 
         return $this->where(['user_name' => $user->id])->find();
     }
-    public function admin() {
+    public function getLes()
+    {
+        $user = auth()->user();
+        $db = db_connect();
+        $query = "SELECT * FROM `sortenles`";
+        $select = $db->query($query);
 
+        return $select->getResult();
     }
     public function getUsers()
     {
+        $user = auth()->user();
         $db = db_connect();
-        $query   = $db->query('SELECT username FROM users');
-        $results = $query->getResultArray();
+        $query = "SELECT * FROM `users`;";
+
+        $select = $db->query($query);
+
+        return $select->getResult();
     }
 
     function getEmail()
     {
-
+        $user = auth()->user();
+        $db = db_connect();
     }
  // de data voor de tft
     // public function gettftByDate($date) {

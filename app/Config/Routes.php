@@ -40,7 +40,7 @@ $routes->get('admin', [tftController::class, 'admin']);
 $routes->get('create', [tftController::class, 'create']);
 $routes->get('tft/profiel', [tftController::class, 'profiel']);
 $routes->get('tft/rooster', [tftController::class, 'rooster']);
-// $routes->match(['get', 'post'], '/create', [tftController::class, 'create']);
+$routes->match(['get', 'post'], 'create', [tftController::class, 'create']);
 $routes->get('tft/(:segment)', [tftController::class, 'view']);
 
 
