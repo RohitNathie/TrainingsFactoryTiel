@@ -20,6 +20,7 @@
   <input name="body" value='<?php echo (auth()->user()->username) ?>' disabled><br>
   Kies een tijdstip met een datum:
   <input type="date">
+  <input type="time">
   <br>
 
   <input type="submit" name="submit" value="Voeg de les toe">
