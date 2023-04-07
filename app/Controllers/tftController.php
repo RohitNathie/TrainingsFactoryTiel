@@ -41,7 +41,14 @@ class tftController extends BaseController
     $postData = $this->request->getPost();
     
     $userModel = new tftModel();
+    if (isset($user['id'])) {
+        $userModel->update($user['id'], $postData);
+    } else {
+        // handle the error - the 'id' key is undefined
+    }
+    
     $userModel->update($user['id'], $postData);
+    var_dump($userModel);
     // Redirect back to the profile page
     return redirect()->to('/profiel');
     

@@ -61,10 +61,9 @@
 <!DOCTYPE html>
 <html>
 <body>
-<link href="<?= base_url(); ?>/public/assets/css/style.css" rel="stylesheet" type="text/css">
 <script src="<?= base_url(); ?>js/script.js" type="text/javascript"></script>
-<img src="<?= base_url('uploads/myimage.jpg') ?>" alt="My Image">
-<img src="<?= base_url('uploads/myimage.jpg') ?>" alt="My Image">
+<!-- <img src="<?= base_url('uploads/myimage.jpg') ?>" alt="My Image">
+<img src="<?= base_url('uploads/myimage.jpg') ?>" alt="My Image"> -->
 
 
 
