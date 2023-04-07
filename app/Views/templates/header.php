@@ -26,15 +26,31 @@ li a {
 li a:hover {
   background-color: #111;
 } 
-
 </style>
-<nav>
+
+<?php if(auth()->user()->role == "klant"): 
+  echo '
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/lessen">Lessen</a></li>
+      <li><a href="/rooster">Rooster</a></li>
+      <li><a href="/profiel">Profiel</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+      ';?>
+
+<?php elseif(auth()->user()->role == "admin" || "instructeur"):
+  echo '<nav>
   <ul>
   <li><a href="/">Home</a></li>
     <li><a href="/create">Create</a></li>
-    <li><a href="/create">Lessen</a></li>
+    <li><a href="/lessen">Lessen</a></li>
     <li><a href="/admin">Admin</a></li>
     <li><a href="/rooster">Rooster</a></li>
+    <li><a href="/profiel">Profiel</a></li>
     <li><a href="/logout">Logout</a></li>
   </ul>
-</nav>
+</nav>';?>
+<?php endif ?>

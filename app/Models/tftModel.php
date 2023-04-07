@@ -76,15 +76,6 @@ class tftModel extends Model
     //     }
     // }
 
-    // public function getGrafiek()
-    // {
-    //    $builder = $this->db->table($this->table);
-    //    $builder->select('mood, COUNT(*) as total');
-    //    $builder->groupBy('mood');
-    //    $query = $builder->get();
-    //    return $query->getResultArray();
-    // }
-
     // public function gettftByClassAndDate($class, $date) {
     //     return $this->where(['class' => $class, 'date' => $date])->findAll();
     // }

@@ -25,12 +25,37 @@ class tftController extends BaseController
     }
 
     public function profiel() {
+    // Load the user's profile data
+    $user = $this->getUser();
+        
+    // Get the submitted form data
+    $postData = $this->request->getPost();
+    
+    $userModel = new tftModel();
+    $userModel->update($user['id'], $postData);
+    // Redirect back to the profile page
+    return redirect()->to('/profiel');
+    
         return view('templates/header')
         . view('tft/profiel')
         . view('templates/footer');
 
     }
 
+    private function getUser()
+    {
+        // Get the current user's ID from the session
+        $userId = session('user_id');
+        
+        // Load the user's data from the database
+        $userModel = new tftModel();
+        $user = $userModel->find($userId);
+        if (!$user) {
+            throw new PageNotFoundException('User not found');
+        }
+        
+        return $user;
+    }
     public function admin() {
         $model = model(tftModel::class);    
 
@@ -59,11 +84,7 @@ class tftController extends BaseController
         }
         // gegevens opgehaald 
         $post = $this->request->getPost(['username', 'date', 'tijd']);
-        // $model->save([
-        //     'title' => $post['title'],
-        //     'mood' => $post['mood'],
-        //     'opmerking' => $post['aantekening'],
-        // ]);
+
 
         if(! $this->validateData($post, [
             'title' => 'required|max_length[255]|min_length[3]',
@@ -73,6 +94,15 @@ class tftController extends BaseController
             .view ('tft/create')
             .view('templates/footer');
         }
+        $model = new tftModel();
+        $model->save([
+            'username' => $post['username'],
+            'date' => $post['date'],
+            'tijd' => $post['tijd'],
+        ]);
+    
+        // Redirect back to the create page
+        return redirect()->to('/create');
         
     }
     // // het saven van je opmerking naar db

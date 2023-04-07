@@ -1,8 +1,12 @@
-<style>
-</style>
-<?php if(auth()->user()->role == "klant"){
-  exit;
-}?>
+<?php if(auth()->user()->role == "klant"): 
+  echo '
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+    </ul>
+  </nav>';?>
+<?php endif; ?>
+
 
 <form action="" method="post">
 <?= csrf_field() ?>
@@ -25,3 +29,4 @@
 
   <input type="submit" name="submit" value="Voeg de les toe">
 </form>
+

@@ -38,8 +38,9 @@ $routes->set404Override();
 $routes->get('/', [tftController::class, 'index']);
 $routes->get('admin', [tftController::class, 'admin']);
 $routes->get('create', [tftController::class, 'create']);
-$routes->get('tft/profiel', [tftController::class, 'profiel']);
-$routes->get('tft/rooster', [tftController::class, 'rooster']);
+$routes->get('profiel', [tftController::class, 'profiel']);
+$routes->get('rooster', [tftController::class, 'rooster']);
+$routes->get('lessen', [tftController::class, 'lessen']);
 $routes->match(['get', 'post'], 'create', [tftController::class, 'create']);
 $routes->get('tft/(:segment)', [tftController::class, 'view']);
 
