@@ -16,6 +16,8 @@ class Security extends BaseConfig
      * @var string 'cookie' or 'session'
      */
     public string $csrfProtection = 'session';
+    public $CSRFProtection = false;
+
 
     /**
      * --------------------------------------------------------------------------
@@ -81,6 +83,7 @@ class Security extends BaseConfig
      * Redirect to previous page with error on failure.
      */
     public bool $redirect = false;
+
 
     /**
      * --------------------------------------------------------------------------

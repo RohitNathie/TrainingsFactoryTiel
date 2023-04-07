@@ -37,6 +37,8 @@ class Filters extends BaseConfig
     public $globals = [
         'before' => [
             
+            'csrf',
+            
             // 'session' => ['except' => ['accounts/login*', 'accounts/register', 'accounts/auth/a/*']],
         ],  
         // ...

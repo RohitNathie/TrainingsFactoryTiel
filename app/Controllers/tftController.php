@@ -5,11 +5,17 @@ use CodeIgniter\Exceptions\PageNotFoundException;
 
 class tftController extends BaseController
 {
-        
+    
+    protected $tftModel;
 
+    public function __construct()
+    {
+        $this->tftModel = new TftModel();
+    }
+   
     public function index()
     {
-        // object
+        
         $model = model(tftModel::class);
 
         $data = [
@@ -26,6 +32,9 @@ class tftController extends BaseController
 
     public function profiel() {
     // Load the user's profile data
+        //    if (!session()->has('user_id')) {
+        // throw new PageNotFoundException('User not found');
+        //  }
     $user = $this->getUser();
         
     // Get the submitted form data
@@ -46,6 +55,8 @@ class tftController extends BaseController
     {
         // Get the current user's ID from the session
         $userId = session('user_id');
+        // $user_id = session('user_id');
+        echo 'User ID: ' . $userId;
         
         // Load the user's data from the database
         $userModel = new tftModel();
@@ -53,15 +64,16 @@ class tftController extends BaseController
         if (!$user) {
             throw new PageNotFoundException('User not found');
         }
-        
+    
         return $user;
     }
+    
     public function admin() {
         $model = model(tftModel::class);    
 
         $data = [
             'users' => $model->getUsers(),
-            'les' => $model->getEmail()
+            // 'les' => $model->getEmail()
         ];
 
         return view('templates/header', $data)
@@ -105,6 +117,49 @@ class tftController extends BaseController
         return redirect()->to('/create');
         
     }
+
+    public function updateRole()
+    {
+        if($_POST && isset($_POST['role'])) {
+            foreach($_POST['role'] as $userId => $role) {
+                switch($role) {
+                    case 'klant':
+                        $newRole = 'klant';
+                        break;
+                    case 'instructeur':
+                        $newRole = 'instructeur';
+                        break;
+                    case 'admin':
+                        $newRole = 'admin';
+                        break;
+                    default:
+                        // handle invalid role value
+                        break;
+                }
+               
+        
+                echo "userId: " . $userId . "<br>";
+                echo "role: " . $role . "<br>";
+                $this->tftModel->updateRole($userId, $newRole);
+            }
+        }
+    }
+    
+    // public function updateRoles()
+    // {
+    //     $role  = $this->request->getPost('role');
+
+    //     $data = [
+    //         'role'=> $role
+    //     ];
+
+    //     $result = $this->tftModel->update($role, $data);
+    //     if($result) {
+    //         echo "User details are updated successfully.";
+    //     } else {
+    //         echo "Something went wrong";
+    //     }
+    // }
     // // het saven van je opmerking naar db
     // public function save_note(){   
     //     $opmerking = $this->request->getPost('aantekening');

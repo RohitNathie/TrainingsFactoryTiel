@@ -6,7 +6,6 @@ use CodeIgniter\Model;
 class tftModel extends Model
 {
     protected $table = 'users';
- 
     protected $allowedFields = ['id', 'username','password', 'user_email', 'leeftijd', 'telnummer', 'role', 'geboortedatum', 'secret'];
 
     
@@ -40,10 +39,29 @@ class tftModel extends Model
         return $select->getResult();
     }
 
-    function getEmail()
+    public function updateRole($userId, $newRole) 
     {
-
+        $userModel = new tftModel();
+        $user = $userModel->find($userId);
+        $user->role = $newRole;
+        $userModel->save($user);
+        var_dump($userId);
+        var_dump($newRole);
+        return $this->update($userId, ['role' => $newRole]);
+        
     }
+
+    // public function update($role, $data) {
+    //     return $this->db
+    //                     ->table('users')
+    //                     ->where(["role" => $role])
+    //                     ->set($data)
+    //                     ->update();
+    // }
+    // function getEmail()
+    // {
+
+    // }
  // de data voor de tft
     // public function gettftByDate($date) {
     //     return $this->where('datum', $date)->findAll();
