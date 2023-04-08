@@ -10,18 +10,18 @@ class tftController extends BaseController
 
     public function __construct()
     {
-        $this->tftModel = new TftModel();
+        
+        $this->tftModel = new tftModel();
     }
    
     public function index()
     {
         
         $model = model(tftModel::class);
-
+        // $data_user = $this->tftModel->getUser();
         $data = [
             'tft'  => $model->gettft(),
-            // 'lastSadTime' => $model->getLastSadTime(),
-            // 'grafieken' => $model->getGrafiek(),
+            // 'email' => $model->getEmail(),
             'naam' => 'Nieuwe tft',
         ];
         
@@ -31,35 +31,51 @@ class tftController extends BaseController
     }
 
     public function profiel() {
-    // Load the user's profile data
-        //    if (!session()->has('user_id')) {
-        // throw new PageNotFoundException('User not found');
-        //  }
-    $user = $this->getUser();
+
+    $user = session()->get('user');
+
+    if (!isset($user['username'])) {
+        $user['username'] = '';
+
+    }
+
+    if (!isset($user['email'])) {
+        $user['email'] = '';
+    }
+
+    if (!isset($user['age'])) {
+        $user['age'] = '';
         
+    }
+    var_dump($user);
+    // $user = session()->get('user') ?? ['username' => ''];
+
+     // Redirect to login page if user is not logged in
+    if (!$user) {
+        return redirect()->to('/login');
+    }
+
     // Get the submitted form data
     $postData = $this->request->getPost();
-    
-    $userModel = new tftModel();
-    if (isset($user['id'])) {
-        $userModel->update($user['id'], $postData);
-    } else {
-        // handle the error - the 'id' key is undefined
+    if (!empty($postData)) {
+        $tftModel = new tftModel();
+    // var_dump($user);
+        $tftModel->update($user['id'], $postData);
+    // $userModel->where('id', $user['id'])->set($postData)->update();
+        $user = $tftModel->find($user['id']);
     }
-    
-    $userModel->update($user['id'], $postData);
-    var_dump($userModel);
     // Redirect back to the profile page
-    return redirect()->to('/profiel');
+    // return redirect()->to('/profiel');
     
         return view('templates/header')
-        . view('tft/profiel')
+        . view('tft/profiel', ['user' => $user])
         . view('templates/footer');
 
     }
 
-    private function getUser()
+    public function getUser()
     {
+        
         // Get the current user's ID from the session
         $userId = session('user_id');
         // $user_id = session('user_id');
@@ -79,6 +95,7 @@ class tftController extends BaseController
         $model = model(tftModel::class);    
 
         $data = [
+            // 'users' => $this->tftModel->getUsers(),
             'users' => $model->getUsers(),
             // 'les' => $model->getEmail()
         ];
@@ -144,29 +161,39 @@ class tftController extends BaseController
                         break;
                 }
                
-        
                 echo "userId: " . $userId . "<br>";
                 echo "role: " . $role . "<br>";
                 $this->tftModel->updateRole($userId, $newRole);
             }
         }
     }
-    
-    // public function updateRoles()
+
+    // public function update()
     // {
-    //     $role  = $this->request->getPost('role');
+    //         $user = $this->getUser(); // Retrieve the user data from the session
+    //         $validation = $this->validate([
+    //             'password' => 'required|min_length[6]',
+    //             'email' => 'required|valid_email',
+    //             'age' => 'required|numeric|greater_than[0]'
+    //         ]);
 
-    //     $data = [
-    //         'role'=> $role
-    //     ];
-
-    //     $result = $this->tftModel->update($role, $data);
-    //     if($result) {
-    //         echo "User details are updated successfully.";
-    //     } else {
-    //         echo "Something went wrong";
-    //     }
+    //         if (!$validation) {
+    //             return view('profile', ['user' => $user, 'validation' => $this->validator]);
+    //         }
+    //         $userData = [
+    //             'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+    //             'email' => $this->request->getPost('email'),
+    //             'age' => $this->request->getPost('age')
+    //         ];
+        
+    //         $this->db->table('users')->update($userData, ['id' => $user['id']]);
+        
+    //         session()->setFlashdata('success', 'Profile updated successfully.');
+        
+    //         return redirect()->to('/profile');
+        
     // }
+    
     // // het saven van je opmerking naar db
     // public function save_note(){   
     //     $opmerking = $this->request->getPost('aantekening');

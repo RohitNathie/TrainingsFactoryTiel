@@ -9,6 +9,11 @@ class tftModel extends Model
     protected $allowedFields = ['id', 'username','password', 'user_email', 'leeftijd', 'telnummer', 'role', 'geboortedatum', 'secret'];
 
     
+    public function getById($id)
+    {
+        return $this->find($id);
+    }
+    
     public function gettft($slug = false)
     {
      if ($slug === false) {
@@ -18,12 +23,6 @@ class tftModel extends Model
      return $this->where(['mood' => $slug])->first();
     }
 
-    public function getMyMood()
-    {
-        $user = auth()->user();
-
-        return $this->where(['user_name' => $user->id])->find();
-    }
     public function getLes()
     {
  
@@ -32,6 +31,7 @@ class tftModel extends Model
     {
         $user = auth()->user();
         $db = db_connect();
+        // retrieving the secret column using JOIN
         $query = "SELECT u.*, a.secret FROM `users` u JOIN `auth_identities` a ON u.id = a.user_id";
     
         $select = $db->query($query);

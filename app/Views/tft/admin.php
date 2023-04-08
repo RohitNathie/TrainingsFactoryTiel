@@ -60,13 +60,13 @@ if(auth()->user() && auth()->user()->role == "admin"){
         }
     }
     
-        
+            // Debugging 
             // echo "userId: " . $userId . "<br>";
             // echo "role: " . $role . "<br>";
             // echo "sql: " . $sql . "<br>";
     
     
-            // Debugging information
+
         }
 
 
