@@ -6,7 +6,8 @@ use CodeIgniter\Model;
 class tftModel extends Model
 {
     protected $table = 'users';
-    protected $allowedFields = ['id', 'username','password', 'user_email', 'leeftijd', 'telnummer', 'role', 'geboortedatum', 'secret'];
+
+    protected $allowedFields = ['id', 'username','password', 'user_email', 'leeftijd', 'telnummer', 'role', 'geboortedatum', 'secret', 'secret2'];
 
     
     public function getById($id)
@@ -23,22 +24,41 @@ class tftModel extends Model
      return $this->where(['mood' => $slug])->first();
     }
 
-    public function getLes()
+    public function getEmail()
     {
- 
+        $user = auth()->user();
+        $db = db_connect();
+    
+        $sql = "SELECT `secret` FROM `auth_identities` WHERE `user_id` = ? ORDER BY `id` ASC;";
+        $selection = $db->query($sql, [$user->id]);
+        $result = $selection->getResult();
+    
+        if (count($result) > 0) {
+            return $result[0]->secret;
+        }
+    
+        // return null;
     }
+    
     public function getUsers()
     {
         $user = auth()->user();
         $db = db_connect();
-        // retrieving the secret column using JOIN
+        // $query = "SELECT `u`.*, `a`.`secret`, `a`.`secret2` FROM `users` `u` INNER JOIN `auth_identities` `a` ON `u`.`id` = `a`.`user_id` WHERE `u`.`id` = ?;";
         $query = "SELECT u.*, a.secret FROM `users` u JOIN `auth_identities` a ON u.id = a.user_id";
-    
-        $select = $db->query($query);
-    
-        return $select->getResult();
+        // $query = "SELECT * FROM users;";
+        // $select = $db->query($query, [$user['id']]);
+        $selection =$db->query($query);
+        
+        
+        // var_dump($user);
+        return $selection->getResult();
+        // var_dump($select);
     }
 
+    
+    
+    
     public function updateRole($userId, $newRole) 
     {
         $userModel = new tftModel();

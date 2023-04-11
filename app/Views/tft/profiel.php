@@ -9,23 +9,26 @@ form_open('/profile/update') ?>
 
 <label for="username">Username:</label>
 <input type="text" name="username" value="<?= $user['username'] ?>">
+<?php if (isset($validation) && $validation->getError('username')): ?>
+    <p><?= $validation->getError('username') ?></p>
+<?php endif ?>
 
 <label for="password">Password:</label>
-<input type="password" name="password" value="">
+<input type="password" name="password" value=""> 
 <?php if (isset($validation) && $validation->getError('password')): ?>
     <p><?= $validation->getError('password') ?></p>
 <?php endif ?>
 
 <label for="email">Email:</label>
-<input type="email" name="email" value="<?= $user['email'] ?>">
+<input type="email" name="email" value="<?= $auth_email ?>">
 <?php if (isset($validation) && $validation->getError('email')): ?>
     <p><?= $validation->getError('email') ?></p>
 <?php endif ?>
 
-<label for="age">Age:</label>
-<input type="number" name="age" value="<?= $user['age'] ?>">
-<?php if (isset($validation) && $validation->getError('age')): ?>
-    <p><?= $validation->getError('age') ?></p>
+<label for="geboortedatum">geboortedatum:</label>
+<input type="date" name="geboortedatum" value="<?= $user['geboortedatum'] ?>">
+<?php if (isset($validation) && $validation->getError('geboortedatum')): ?>
+    <p><?= $validation->getError('geboortedatum') ?></p>
 <?php endif ?>
 
 <button type="submit">Save changes</button>

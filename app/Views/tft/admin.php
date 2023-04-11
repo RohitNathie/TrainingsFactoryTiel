@@ -1,12 +1,5 @@
-<?php if(auth()->user()->role == "klant"):
-  echo '<nav>
-  <ul>
-  <li><a href="/">Home</a></li>
-  </ul>
-</nav>';?>
-
-<?php endif; ?>
 <?php
+
 
 if(auth()->user() && auth()->user()->role == "admin"){
     echo("<h2>Hier kunt u de rollen van gebruikers aanpasesen.</h2>");
@@ -17,9 +10,9 @@ if(auth()->user() && auth()->user()->role == "admin"){
         foreach($users as $user):
             ?>
             <tr>
-                
                 <td>Naam: <?php echo $user->username; ?></td> 
                 <td>Email: <?php echo $user->secret; ?></td>
+                
                 <td>
                     <select name="role[<?php echo $user->id; ?>]"> <!-- Add select box to choose role for each user -->
                         <option value="klant" <?php if($user->role == 'klant') echo 'selected'; ?>>Klant</option>
@@ -74,5 +67,9 @@ if(auth()->user() && auth()->user()->role == "admin"){
 if(auth()->user()->role == "instructeur"){
     echo("<h2> Maak hier uw lessen aan</h2>");
     // include("create.php");
+
+    echo '<form method="" action="create">
+    <input type="submit"/>
+  </form>';
 }
 ?>

@@ -21,7 +21,7 @@ class tftController extends BaseController
         // $data_user = $this->tftModel->getUser();
         $data = [
             'tft'  => $model->gettft(),
-            // 'email' => $model->getEmail(),
+            'email' => $model->getEmail(),
             'naam' => 'Nieuwe tft',
         ];
         
@@ -29,49 +29,39 @@ class tftController extends BaseController
         . view('tft/index')
         . view('templates/footer');
     }
+// Edit profile
+// public function profiel()
+// {
+//     $session = session();
 
-    public function profiel() {
+//     if (! $userId = $session->get('user')['id']) {
+//         // kan userid niet in sessie vinden
+//         var_dump('UID Session Lookup failure', $session->get('user'));
+//         return;
+//     }
 
-    $user = session()->get('user');
+//     // fetching user data, from db
+//     $tftModel = new tftModel();
+//     if (! $user = $tftModel->find($userId)) {
+//         // kan user niet vinden in db
+//         var_dump('User Lookup failure', $userId);
+//         return;
+//     }
 
-    if (!isset($user['username'])) {
-        $user['username'] = '';
+//     if ($postData = $this->request->getPost())
+//     {
+//         //  Updating the data
+//         $tftModel->update($userId, $postData);
+//         $user = $tftModel->find($userId);
+//     }
+//     // var_dump('user', $user);
+//     $session->set(['user'=>$user]);
+//     var_dump($user);
 
-    }
-
-    if (!isset($user['email'])) {
-        $user['email'] = '';
-    }
-
-    if (!isset($user['age'])) {
-        $user['age'] = '';
-        
-    }
-    var_dump($user);
-    // $user = session()->get('user') ?? ['username' => ''];
-
-     // Redirect to login page if user is not logged in
-    if (!$user) {
-        return redirect()->to('/login');
-    }
-
-    // Get the submitted form data
-    $postData = $this->request->getPost();
-    if (!empty($postData)) {
-        $tftModel = new tftModel();
-    // var_dump($user);
-        $tftModel->update($user['id'], $postData);
-    // $userModel->where('id', $user['id'])->set($postData)->update();
-        $user = $tftModel->find($user['id']);
-    }
-    // Redirect back to the profile page
-    // return redirect()->to('/profiel');
-    
-        return view('templates/header')
-        . view('tft/profiel', ['user' => $user])
-        . view('templates/footer');
-
-    }
+//     return view('templates/header')
+//          . view('tft/profiel', ['user' => $user])
+//          . view('templates/footer');
+// }
 
     public function getUser()
     {
@@ -79,7 +69,7 @@ class tftController extends BaseController
         // Get the current user's ID from the session
         $userId = session('user_id');
         // $user_id = session('user_id');
-        echo 'User ID: ' . $userId;
+        // echo 'User ID: ' . $userId;
         
         // Load the user's data from the database
         $userModel = new tftModel();
@@ -87,17 +77,40 @@ class tftController extends BaseController
         if (!$user) {
             throw new PageNotFoundException('User not found');
         }
-    
         return $user;
     }
-    
-    public function admin() {
-        $model = model(tftModel::class);    
+    public function profiel()
+    {
+        $user = auth()->user();
+        $userId = $user ? $user->id : null;
+        // Debug
+        // echo 'User ID: ' . $userId;
+        $model = model(tftModel::class);
+        $user = $model->find($userId);
+        if (!$user) {
+            throw new PageNotFoundException('User not found');
+        }
+        // return $user;
 
         $data = [
-            // 'users' => $this->tftModel->getUsers(),
-            'users' => $model->getUsers(),
-            // 'les' => $model->getEmail()
+            'user' => $user,
+            'auth_email' => $model->getEmail(),
+        ];
+        // var_dump($data);
+
+
+        return view('templates/header', $data)
+        .view ('tft/profiel')
+        .view('templates/footer');
+
+    }
+    public function admin() {
+        $model = model(tftModel::class); 
+        $user = $model->getUser(session()->get('user_id'));   
+
+        $data = [
+            'users' => $user,
+            // 'auth_identities' => $model->getEmail(),
         ];
 
         return view('templates/header', $data)
@@ -163,7 +176,7 @@ class tftController extends BaseController
                
                 echo "userId: " . $userId . "<br>";
                 echo "role: " . $role . "<br>";
-                $this->tftModel->updateRole($userId, $newRole);
+                $this->tftModel = new tftModel();
             }
         }
     }
