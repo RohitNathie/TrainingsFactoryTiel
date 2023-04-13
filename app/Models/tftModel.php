@@ -56,8 +56,17 @@ class tftModel extends Model
         // var_dump($select);
     }
 
-    
-    
+    public function updateUser($userId, $newUsername, $leeftijd, $newEmail, $newGeboortedatum) {
+        $this->db->table('users')
+                 ->where('id', $userId)
+                 ->update([
+                     'username' => $newUsername,
+                     'leeftijd' => $leeftijd,
+                     'email' => $newEmail,
+                     'geboortedatum' => $newGeboortedatum
+                 ]);
+                 return $this->db->affectedRows() > 0;
+    }
     
     public function updateRole($userId, $newRole) 
     {

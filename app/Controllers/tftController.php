@@ -106,7 +106,7 @@ class tftController extends BaseController
     }
     public function admin() {
         $model = model(tftModel::class); 
-        $user = $model->getUser(session()->get('user_id'));   
+        $user = $model->getUsers(session()->get('user_id'));   
 
         $data = [
             'users' => $user,
@@ -179,6 +179,40 @@ class tftController extends BaseController
                 $this->tftModel = new tftModel();
             }
         }
+    }
+    public function updateProfiel()
+    {
+        $user = auth()->user();
+        $model = new tftModel();
+        $data = [
+		'username'	=> $this->request->getPost('username'),
+        'email'	=> $this->request->getPost('email'),
+        'leeftijd' => $this->request->getPost('leeftijd'),
+		'geboortedatum'		=> $this->request->getPost('geboortedatum'),
+        ]; 
+        $model->update($user['id'], $data);
+        return redirect()->to('profiel')->with('success', 'Profile updated successfully');
+        // var_dump($data);
+        // $user->update($data);
+        // var_dump($user);
+
+        // $user = auth()->user();
+		// $username	= $this->request->getPost('username');
+		// $email	= $this->request->getPost('email');
+        // $leeftijd = $this->request->getPost('leeftijd');
+		// $geboortedatum		= $this->request->getPost('geboortedatum');
+        // // var_dump($user, $username, $email, $geboortedatum);
+
+        // $result = $this->tftModel->updateUser($user['id'], $username, $email, $leeftijd, $geboortedatum);
+        
+        // if ($result) {
+        //     session()->setFlashdata('success', 'User details are updated successfully.');
+        // } else {
+        //     session()->setFlashdata('error', 'Something went wrong.');
+        // }
+    
+        // return redirect()->to('/profile');
+    
     }
 
     // public function update()

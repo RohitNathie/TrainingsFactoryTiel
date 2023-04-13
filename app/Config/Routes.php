@@ -43,6 +43,9 @@ $routes->get('lessen', [tftController::class, 'lessen']);
 $routes->match(['get', 'post'], 'create', [tftController::class, 'create']);
 $routes->get('tft/(:segment)', [tftController::class, 'view']);
 $routes->match(['get', 'post'],'admin', [tftController::class, 'admin']);
+$routes->post('profiel/update', [tftController::class, 'updateProfiel']);
+
+
 
 
 
