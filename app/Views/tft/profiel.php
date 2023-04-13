@@ -4,9 +4,10 @@
     <p><?= session('success') ?></p>
 <?php endif ?>
 
-<?= helper('form');
-form_open('profiel/updateProfiel', array('method' => 'POST')) ?>
-
+<?php
+  helper('form');
+  echo form_open('profiel', array('method' => 'POST'))
+?>
 
 <label for="username">Username:</label>
 <input type="text" name="username" value="<?= $user['username'] ?>">

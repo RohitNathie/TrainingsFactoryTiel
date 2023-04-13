@@ -857,3 +857,647 @@ INFO - 2023-04-13 15:40:58 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-04-13 15:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-04-13 15:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-04-13 15:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:40:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:43:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 16:43:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:27:34 --> CSRF token verified.
+ERROR - 2023-04-13 17:27:34 --> mysqli_sql_exception: Unknown column 'secret' in 'field list' in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Models\tftModel.php(66): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gma...', '2014-04-08')
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-13 17:27:34 --> Unknown column 'secret' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `username` = :username:, `leeftijd` = :leeftijd:, `secret` = :secret:, `geboortedatum` = :geboortedatum:
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\tftModel.php(66): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gmail.com', '2014-04-08')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 17:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:27:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:27:39 --> CSRF token verified.
+ERROR - 2023-04-13 17:27:39 --> mysqli_sql_exception: Unknown column 'secret' in 'field list' in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Models\tftModel.php(66): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gma...', '2014-04-08')
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-13 17:27:39 --> Unknown column 'secret' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `username` = :username:, `leeftijd` = :leeftijd:, `secret` = :secret:, `geboortedatum` = :geboortedatum:
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\tftModel.php(66): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gmail.com', '2014-04-08')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 17:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 17:28:41 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 17:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:28:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:28:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:28:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:28:47 --> CSRF token verified.
+ERROR - 2023-04-13 17:28:47 --> mysqli_sql_exception: Unknown column 'secret' in 'field list' in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Models\tftModel.php(66): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gma...', '2014-04-08')
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-13 17:28:47 --> Unknown column 'secret' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `username` = :username:, `leeftijd` = :leeftijd:, `secret` = :secret:, `geboortedatum` = :geboortedatum:
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\tftModel.php(66): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gmail.com', '2014-04-08')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 17:40:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 17:40:25 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 17:40:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 17:40:30 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 17:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:40:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:40:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:40:36 --> CSRF token verified.
+ERROR - 2023-04-13 17:40:36 --> mysqli_sql_exception: Unknown column 'secret' in 'field list' in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Models\tftModel.php(66): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gma...', '2014-04-08')
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-13 17:40:36 --> Unknown column 'secret' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `username` = :username:, `leeftijd` = :leeftijd:, `secret` = :secret:, `geboortedatum` = :geboortedatum:
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\tftModel.php(66): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gmail.com', '2014-04-08')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 17:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 17:50:56 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 17:50:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:50:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:51:02 --> CSRF token verified.
+ERROR - 2023-04-13 17:51:02 --> mysqli_sql_exception: Unknown column 'secret' in 'field list' in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Models\tftModel.php(66): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gma...', '2014-04-08')
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-13 17:51:02 --> Unknown column 'secret' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `username` = :username:, `leeftijd` = :leeftijd:, `secret` = :secret:, `geboortedatum` = :geboortedatum:
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\tftModel.php(66): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gmail.com', '2014-04-08')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 17:52:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 17:52:58 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 17:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:53:03 --> CSRF token verified.
+ERROR - 2023-04-13 17:53:03 --> mysqli_sql_exception: Unknown column 'secret' in 'field list' in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Models\tftModel.php(66): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gma...', '2014-04-08')
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-13 17:53:03 --> Unknown column 'secret' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `username` = :username:, `leeftijd` = :leeftijd:, `secret` = :secret:, `geboortedatum` = :geboortedatum:
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\tftModel.php(66): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gmail.com', '2014-04-08')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 17:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:54:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:54:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:54:49 --> CSRF token verified.
+ERROR - 2023-04-13 17:54:49 --> mysqli_sql_exception: Unknown column 'secret' in 'field list' in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Models\tftModel.php(66): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gma...', '2014-04-08')
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-13 17:54:49 --> Unknown column 'secret' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `username` = :username:, `leeftijd` = :leeftijd:, `secret` = :secret:, `geboortedatum` = :geboortedatum:
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\tftModel.php(66): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gmail.com', '2014-04-08')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 17:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 17:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:10:47 --> CSRF token verified.
+ERROR - 2023-04-13 18:10:47 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`trainingsfactorytiel`.`login`, CONSTRAINT `fk_user_name` FOREIGN KEY (`user_name`) REFERENCES `users` (`username`)) in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Models\tftModel.php(67): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gma...', '2014-04-08')
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+INFO - 2023-04-13 18:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 18:12:03 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 18:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 18:12:05 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 18:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 18:12:06 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 18:12:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 18:12:40 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 18:12:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 18:12:40 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 18:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 18:12:41 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 18:12:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 18:12:47 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 18:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 18:12:48 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 18:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:14:09 --> CSRF token verified.
+ERROR - 2023-04-13 18:14:09 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`trainingsfactorytiel`.`login`, CONSTRAINT `fk_user_name` FOREIGN KEY (`user_name`) REFERENCES `users` (`username`)) in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Models\tftModel.php(67): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gma...', '2014-04-08')
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+INFO - 2023-04-13 18:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:14:17 --> CSRF token verified.
+ERROR - 2023-04-13 18:14:17 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`trainingsfactorytiel`.`login`, CONSTRAINT `fk_user_name` FOREIGN KEY (`user_name`) REFERENCES `users` (`username`)) in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Models\tftModel.php(67): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gma...', '2014-04-08')
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+INFO - 2023-04-13 18:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:19:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 18:19:38 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 18:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:21:49 --> CSRF token verified.
+ERROR - 2023-04-13 18:21:49 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`trainingsfactorytiel`.`login`, CONSTRAINT `fk_user_name` FOREIGN KEY (`user_name`) REFERENCES `users` (`username`)) in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Models\tftModel.php(67): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gma...', '2014-04-08')
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+INFO - 2023-04-13 18:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 18:22:21 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 18:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:22:26 --> CSRF token verified.
+INFO - 2023-04-13 18:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:23:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:24:15 --> CSRF token verified.
+ERROR - 2023-04-13 18:24:15 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`trainingsfactorytiel`.`login`, CONSTRAINT `fk_user_name` FOREIGN KEY (`user_name`) REFERENCES `users` (`username`)) in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Models\tftModel.php(67): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gma...', '2014-04-08')
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+INFO - 2023-04-13 18:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:27:14 --> CSRF token verified.
+ERROR - 2023-04-13 18:27:14 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`trainingsfactorytiel`.`login`, CONSTRAINT `fk_user_name` FOREIGN KEY (`user_name`) REFERENCES `users` (`username`)) in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Models\tftModel.php(67): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gma...', '2014-04-08')
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+INFO - 2023-04-13 18:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:27:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:27:18 --> CSRF token verified.
+ERROR - 2023-04-13 18:27:18 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`trainingsfactorytiel`.`login`, CONSTRAINT `fk_user_name` FOREIGN KEY (`user_name`) REFERENCES `users` (`username`)) in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Models\tftModel.php(67): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gma...', '2014-04-08')
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+INFO - 2023-04-13 18:27:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:35:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:35:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:41:58 --> CSRF token verified.
+ERROR - 2023-04-13 18:41:58 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`trainingsfactorytiel`.`login`, CONSTRAINT `fk_user_name` FOREIGN KEY (`user_name`) REFERENCES `users` (`username`)) in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Models\tftModel.php(67): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(198): App\Models\tftModel->updateUser(1, 'RohitW', '1', 'rohitgame01@gma...', '2014-04-08')
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->updateProfiel()
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+INFO - 2023-04-13 18:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-13 18:42:05 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profiel', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 18:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 18:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-04-13 18:59:55 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'trainingsfactor...', 3306, '', 0)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(163): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(41): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(21): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(689): setting('Auth.sessionCon...')
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(707): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(394): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(378): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\shield\src\Auth.php(75): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(85): CodeIgniter\Shield\Auth->user()
+#14 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->profiel()
+#15 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#16 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#18 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#19 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(163): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(41): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#5 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#6 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(21): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#7 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(689): setting('Auth.sessionCon...')
+#8 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(707): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#9 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(394): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#10 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(378): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#11 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\shield\src\Auth.php(75): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#12 C:\xampp\htdocs\codeigniter\codeigniterTft\app\Controllers\tftController.php(85): CodeIgniter\Shield\Auth->user()
+#13 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\tftController->profiel()
+#14 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+#15 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#16 C:\xampp\htdocs\codeigniter\codeigniterTft\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#17 C:\xampp\htdocs\codeigniter\codeigniterTft\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#18 {main}
+CRITICAL - 2023-04-13 18:59:55 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(163): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(41): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 5 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 6 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(21): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(689): setting('Auth.sessionConfig')
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(707): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(394): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(378): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+11 VENDORPATH\codeigniter4\shield\src\Auth.php(75): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+12 APPPATH\Controllers\tftController.php(85): CodeIgniter\Shield\Auth->user()
+13 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\tftController->profiel()
+14 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\tftController))
+15 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-13 19:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 19:00:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 19:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-13 19:00:04 --> CSRF token verified.
+INFO - 2023-04-13 19:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

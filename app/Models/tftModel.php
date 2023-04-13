@@ -57,15 +57,32 @@ class tftModel extends Model
     }
 
     public function updateUser($userId, $newUsername, $leeftijd, $secret, $newGeboortedatum) {
+        $this->db->transStart();
+
         $this->db->table('users')
-                 ->where('id', $userId)
-                 ->update([
-                     'username' => $newUsername,
-                     'leeftijd' => $leeftijd,
-                     'secret' => $secret,
-                     'geboortedatum' => $newGeboortedatum
-                 ]);
-                 return $this->db->affectedRows() > 0;
+        ->where('id', $userId)
+        ->update([
+            'username' => $newUsername,
+            'leeftijd' => $leeftijd,
+            'geboortedatum' => $newGeboortedatum,
+        ]);
+
+$this->db->table('auth_identities')
+        ->where('user_id', $userId)
+        ->update([
+            'secret' => $secret,
+        ]);
+        // $this->db->table('users', 'auth_identities')
+        //          ->where('id', $userId)
+        //          ->update([
+        //              'username' => $newUsername,
+        //              'leeftijd' => $leeftijd,
+        //              'secret' => $secret,
+        //              'geboortedatum' => $newGeboortedatum,
+        //          ]);
+        //          return $this->db->affectedRows() > 0;
+        $this->db->transComplete();
+    return $this->db->transStatus();
     }
     
     public function updateRole($userId, $newRole) 

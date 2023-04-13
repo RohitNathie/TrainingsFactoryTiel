@@ -197,7 +197,7 @@ class tftController extends BaseController
         // $model->updateUser($user['id'], $data['username'], $data['leeftijd'], $data['secret'], $data['geboortedatum']);
         $model->updateUser($user->id, $data['username'], $data['leeftijd'], $data['secret'], $data['geboortedatum']);
 
-        var_dump($data);
+        // var_dump($data);
 
         // return redirect()->to('profiel')->with('success', 'Profile updated successfully');
 
