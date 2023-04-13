@@ -6,7 +6,7 @@
 
 <?= helper('form');
 form_open('profiel/updateProfiel', array('method' => 'POST')) ?>
-<form action="<?= base_url('profiel/update') ?>" method="post">
+
 
 <label for="username">Username:</label>
 <input type="text" name="username" value="<?= $user['username'] ?>">
@@ -37,7 +37,7 @@ form_open('profiel/updateProfiel', array('method' => 'POST')) ?>
 <?php if (isset($validation) && $validation->getError('geboortedatum')): ?>
     <p><?= $validation->getError('geboortedatum') ?></p>
 <?php endif ?>
-
+<input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
 
 <button type="submit" name="update" value="Update">Save changes</button>
-</form>
+
