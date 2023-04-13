@@ -10,6 +10,7 @@ class tftController extends BaseController
 
     public function __construct()
     {
+        // $this->config->set_item('csrf_protection', false);
         
         $this->tftModel = new tftModel();
     }
@@ -186,15 +187,17 @@ class tftController extends BaseController
         $model = new tftModel();
         $data = [
 		'username'	=> $this->request->getPost('username'),
-        'email'	=> $this->request->getPost('email'),
+        'secret'	=> $this->request->getPost('email'),
         'leeftijd' => $this->request->getPost('leeftijd'),
 		'geboortedatum'		=> $this->request->getPost('geboortedatum'),
         ]; 
-        $model->update($user['id'], $data);
-        return redirect()->to('profiel')->with('success', 'Profile updated successfully');
-        // var_dump($data);
-        // $user->update($data);
-        // var_dump($user);
+
+
+        // $model->update($user['id'], $data);
+        $model->updateUser($user['id'], $data['username'], $data['leeftijd'], $data['secret'], $data['geboortedatum']);
+        var_dump($data);
+
+        // return redirect()->to('profiel')->with('success', 'Profile updated successfully');
 
         // $user = auth()->user();
 		// $username	= $this->request->getPost('username');

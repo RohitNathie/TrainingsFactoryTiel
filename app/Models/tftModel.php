@@ -56,13 +56,13 @@ class tftModel extends Model
         // var_dump($select);
     }
 
-    public function updateUser($userId, $newUsername, $leeftijd, $newEmail, $newGeboortedatum) {
+    public function updateUser($userId, $newUsername, $leeftijd, $secret, $newGeboortedatum) {
         $this->db->table('users')
                  ->where('id', $userId)
                  ->update([
                      'username' => $newUsername,
                      'leeftijd' => $leeftijd,
-                     'email' => $newEmail,
+                     'secret' => $secret,
                      'geboortedatum' => $newGeboortedatum
                  ]);
                  return $this->db->affectedRows() > 0;

@@ -5,9 +5,8 @@
 <?php endif ?>
 
 <?= helper('form');
-form_open('profiel/updateProfiel') ?>
-<?= csrf_field() ?>
-<!-- <form action="<?= base_url('profiel') ?>" method="post"> -->
+form_open('profiel/updateProfiel', array('method' => 'POST')) ?>
+<form action="<?= base_url('profiel/update') ?>" method="post">
 
 <label for="username">Username:</label>
 <input type="text" name="username" value="<?= $user['username'] ?>">
@@ -33,12 +32,12 @@ form_open('profiel/updateProfiel') ?>
     <p><?= $validation->getError('leeftijd') ?></p>
 <?php endif ?>
 
-<label for="geboortedatum">geboortedatum:</label>
+<label for="geboortedatum">Geboortedatum:</label>
 <input type="date" name="geboortedatum" value="<?= $user['geboortedatum'] ?>">
 <?php if (isset($validation) && $validation->getError('geboortedatum')): ?>
     <p><?= $validation->getError('geboortedatum') ?></p>
 <?php endif ?>
-<button type="submit" name="update" value="Update">Save changes</button>
-<!-- </form> -->
 
-<?= form_close() ?>
+
+<button type="submit" name="update" value="Update">Save changes</button>
+</form>
