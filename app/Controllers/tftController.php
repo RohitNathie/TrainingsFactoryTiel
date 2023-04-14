@@ -2,7 +2,7 @@
 namespace App\Controllers;
 use App\Models\tftModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
-
+header('Access-Control-Allow-Origin: *');
 class tftController extends BaseController
 {
     
