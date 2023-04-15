@@ -9,12 +9,13 @@ class tftModel extends Model
 
     protected $allowedFields = ['id', 'username','password', 'user_email', 'leeftijd', 'telnummer', 'role', 'geboortedatum', 'secret', 'secret2'];
 
-    
     public function getById($id)
     {
         return $this->find($id);
     }
-    
+
+
+
     public function gettft($slug = false)
     {
      if ($slug === false) {
@@ -23,7 +24,9 @@ class tftModel extends Model
 
      return $this->where(['mood' => $slug])->first();
     }
+// class emailModel exteds Model{
 
+// }
     public function getEmail()
     {
         $user = auth()->user();
@@ -39,7 +42,9 @@ class tftModel extends Model
     
         // return null;
     }
-    
+    // class usersModel extends Model {
+
+// }
     public function getUsers()
     {
         $user = auth()->user();
@@ -55,7 +60,9 @@ class tftModel extends Model
         return $selection->getResult();
         // var_dump($select);
     }
+// class updateModel extends Model {
 
+// }
     public function updateUser($userId, $newUsername, $leeftijd, $secret, $newGeboortedatum) {
         $this->db->transStart();
 
@@ -104,56 +111,6 @@ $this->db->table('auth_identities')
     //                     ->set($data)
     //                     ->update();
     // }
-    // function getEmail()
-    // {
-
-    // }
- // de data voor de tft
-    // public function gettftByDate($date) {
-    //     return $this->where('datum', $date)->findAll();
-    // }
-
-    // public function getLastSadTime()
-    // {
-
-    //     $user = auth()->user();
-        
-    //     $test= $this->where(['user_name' => $user->id, 'mood' => 'sad'])->orderBy('datum', 'DESC')->first(); 
-    //     return $test;
-        
-        
-    // }
-    
-    // public function save_note($opmerking) {
-    //     $data = [
-    //         'opmerking' => $opmerking,
-    //     ];
-
-    //     try{
-    //         $this->insert($data);
-    //         return true;
-    //     }
-    //     catch(\Exception $e)
-    //     {
-    //         log_message('error', 'Error met het uploaden van de opmerking: ' . $e->getMessage());
-    //         return false;
-    //     }
-    // }
-
-    // public function gettftByClassAndDate($class, $date) {
-    //     return $this->where(['class' => $class, 'date' => $date])->findAll();
-    // }
-    
-
-    
-    
-        // $month = date('m');
-        // $user = auth()->user()->id;
-        // $db = db_connect();
-        // $sql = '';
-        // $selection - $db->query($sql, [$user, $month]);
-
-        // return $selection->getResult();
 }
 ?>
 

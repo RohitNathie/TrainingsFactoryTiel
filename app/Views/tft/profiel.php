@@ -17,9 +17,9 @@
 
 <!-- <label for="password">Password:</label>
 <input type="password" name="password" value="">  -->
-<?php if (isset($validation) && $validation->getError('password')): ?>
+<!-- <?php if (isset($validation) && $validation->getError('password')): ?>
     <p><?= $validation->getError('password') ?></p>
-<?php endif ?>
+<?php endif ?> -->
 
 <label for="email">Email:</label>
 <input type="email" name="email" value="<?= $auth_email ?>">

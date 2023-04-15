@@ -105,6 +105,38 @@ class tftController extends BaseController
         .view('templates/footer');
 
     }
+
+    public function updateProfiel()
+    {
+        $model = model(tftModel::class);
+        $user = auth()->user();
+        $userId = $user ? $user->id : null;
+    
+        // Retrieve the data from the form
+        $newUsername = $this->request->getPost('username');
+        $leeftijd = $this->request->getPost('leeftijd');
+        $secret = $this->request->getPost('email');
+        $newGeboortedatum = $this->request->getPost('geboortedatum');
+    
+        // Update the user data in the database
+        $model->updateUser($userId, $newUsername, $leeftijd, $secret, $newGeboortedatum);
+    
+        // Load the updated user data
+        $user = $model->find($userId);
+    
+        // Prepare the data to be sent to the view
+        $data = [
+            'user' => $user,
+            'auth_email' => $model->getEmail(),
+            'success' => 'Profile updated successfully.',
+        ];
+    
+        // Return the view with the updated user data
+        return view('templates/header', $data)
+            . view('tft/profiel')
+            . view('templates/footer');
+    }
+    
     public function admin() {
         $model = model(tftModel::class); 
         $user = $model->getUsers(session()->get('user_id'));   
@@ -181,44 +213,8 @@ class tftController extends BaseController
             }
         }
     }
-    public function updateProfiel()
-    {
-        $user = auth()->user();
-        $model = new tftModel();
-        $data = [
-		'username'	=> $this->request->getPost('username'),
-        'secret'	=> $this->request->getPost('email'),
-        'leeftijd' => $this->request->getPost('leeftijd'),
-		'geboortedatum'		=> $this->request->getPost('geboortedatum'),
-        ]; 
 
 
-        // $model->update($user['id'], $data);
-        // $model->updateUser($user['id'], $data['username'], $data['leeftijd'], $data['secret'], $data['geboortedatum']);
-        $model->updateUser($user->id, $data['username'], $data['leeftijd'], $data['secret'], $data['geboortedatum']);
-
-        // var_dump($data);
-
-        // return redirect()->to('profiel')->with('success', 'Profile updated successfully');
-
-        // $user = auth()->user();
-		// $username	= $this->request->getPost('username');
-		// $email	= $this->request->getPost('email');
-        // $leeftijd = $this->request->getPost('leeftijd');
-		// $geboortedatum		= $this->request->getPost('geboortedatum');
-        // // var_dump($user, $username, $email, $geboortedatum);
-
-        // $result = $this->tftModel->updateUser($user['id'], $username, $email, $leeftijd, $geboortedatum);
-        
-        // if ($result) {
-        //     session()->setFlashdata('success', 'User details are updated successfully.');
-        // } else {
-        //     session()->setFlashdata('error', 'Something went wrong.');
-        // }
-    
-        // return redirect()->to('/profile');
-    
-    }
 
     // public function update()
     // {
